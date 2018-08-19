@@ -1,0 +1,30 @@
+
+/*
+Realizado por Sergio Daniel Velasquez Pobre
+Descripcion: Se encuentra el css de los elementos que componen el login.
+*/
+.login-register { /* class aplicada en el section*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    padding: 10% 0;
+    position: fixed; }
+  
+  .login-box {
+    width: 500px;
+    margin: 0 auto; }
+  
+  .login-sidebar {
+    padding: 0px;
+    margin-top: 0px; }
+    .login-sidebar .login-box {
+      border: 3px solid gray;
+      border-radius: 5%;
+      top:20%;
+      right: 32%;
+      position: absolute;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+      height: 60%; }
+  

@@ -9,7 +9,7 @@ const appRoutes: Routes = [ // Se crea el objeto de tipo Routes,
 
    
     { path: 'login' , component: LoginComponent},
-    { path:'',component:PagesComponent,loadChildren:'./pages/pages.module#PagesModule'}, // Carga de forma dinamica. Un modulo independiente.
+    { path:'',component:PagesComponent,loadChildren:'./pages/pages.module#PagesModule'}, // Falta implementar el guard ....
     { path: '**' , component: NopagefoundComponent}// Los ** es un comodin para cualquier ruta invalida.
 ];
 
