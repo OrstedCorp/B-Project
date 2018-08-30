@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
+import { UsuarioService } from '../../services/service.index';
+
 declare function init_plugins();
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -7,7 +11,7 @@ declare function init_plugins();
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor( public _usuarioService: UsuarioService ) { }
 
   ngOnInit() {
     init_plugins();

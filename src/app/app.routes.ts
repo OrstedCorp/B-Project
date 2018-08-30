@@ -9,8 +9,13 @@ const appRoutes: Routes = [ // Se crea el objeto de tipo Routes,
 
    
     { path: 'login' , component: LoginComponent},
-    { path:'',component:PagesComponent,loadChildren:'./pages/pages.module#PagesModule'}, // Falta implementar el guard ....
-    { path: '**' , component: NopagefoundComponent}// Los ** es un comodin para cualquier ruta invalida.
+    { 
+        path:'', 
+        component:PagesComponent,
+        canActivate: [LoginGuard],
+        loadChildren:'./pages/pages.module#PagesModule'
+    },
+    { path: '**' , component: NopagefoundComponent} // Los ** es un comodin para cualquier ruta invalida.
 ];
 
 export const APP_ROUTES = RouterModule.forRoot(appRoutes, {useHash:true}); // Se modulan las rutas para ser importadas en el module principal.

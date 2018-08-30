@@ -1,12 +1,14 @@
 import { Routes, RouterModule } from '@angular/router';
+
+//Rutas hijas
+import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 
 
-
-
-
-const pagesRouter: Routes =[
-    { path: 'perfil' , component: ProfileComponent,data:{titulo:'Perfil de usuario'}}
+const pagesRouter: Routes = [
+    { path: 'home', component: HomeComponent, data: {titulo: 'Inicio'} },
+    { path: 'profile', component: ProfileComponent, data:{titulo:'Perfil de usuario'} },
+    { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 
