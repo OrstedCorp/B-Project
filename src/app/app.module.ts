@@ -17,12 +17,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Servicios
 import { ServicesModule } from './services/services.module';
+import { ImagenPipe } from './pipes/imagen.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PagesComponent
+    PagesComponent,
+    
   ],
   imports: [
     SharedModule,

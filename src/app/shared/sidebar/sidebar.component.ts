@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { UsuarioService } from '../../services/service.index';
+import { Usuario } from '../../models/usuario.model';
 
 declare function init_plugins();
 
@@ -10,11 +11,12 @@ declare function init_plugins();
   styles:[]
 })
 export class SidebarComponent implements OnInit {
-
-  constructor( public _usuarioService: UsuarioService ) { }
+  usuario:Usuario;
+  constructor( public _usuarioService: UsuarioService ) { } // cargarmenu recordarrrrrrrrrrrrrr
 
   ngOnInit() {
     init_plugins();
+    this.usuario= this._usuarioService.usuario;
   }
 
 }

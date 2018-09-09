@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PAGES_ROUTES } from './pages.router';
 import { SharedModule } from '../shared/shared.module';
+// Pipes
+import { PipesModule } from '../pipes/pipes.module';
 
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -18,7 +20,8 @@ import { ProfileComponent } from './profile/profile.component';
     imports:[
         SharedModule,
         CommonModule,
-        PAGES_ROUTES
+        PAGES_ROUTES,
+        PipesModule
     ]
 })
 
