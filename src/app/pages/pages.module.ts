@@ -7,6 +7,7 @@ import { PipesModule } from '../pipes/pipes.module';
 
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
 
@@ -21,6 +22,8 @@ import { ProfileComponent } from './profile/profile.component';
         SharedModule,
         CommonModule,
         PAGES_ROUTES,
+        FormsModule,
+        ReactiveFormsModule,
         PipesModule
     ]
 })

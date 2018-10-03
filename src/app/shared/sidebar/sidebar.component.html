@@ -8,16 +8,26 @@
                     <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img [src]="usuario.img | imagen" alt="user"><span class="hide-menu">{{ usuario.nombre}} </span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a routerLink="/profile">Mi perfil </a></li>
-                        <li><a href="javascript:void()">Configuracion</a></li>
-                        <li><a (click)="_usuarioService.logout()" >Cerrar sesion</a></li>
+                        <!-- Configuración no implementada -->
+                        <!-- <li><a href="javascript:void()">Configuracion</a></li> -->
+                        <li><a (click)="_usuarioService.logout()" href="#" >Cerrar sesion</a></li>
                     </ul>
                 </li>
                 <li class="nav-devider"></li>
                 <li class="nav-small-cap">PERSONAL</li>
-                <li class="active"> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard <span class="label label-rouded label-themecolor pull-right">4</span></span></a>
+                <li class="active"> 
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                        <i class="mdi mdi-gauge"></i>
+                        <span class="hide-menu">
+                            Dashboard
+                            <!-- Ni idea para que sirve esto -->
+                            <!-- <span class="label label-rouded label-themecolor pull-right">4</span> -->
+                        </span>
+                    </a>
+
                     <ul aria-expanded="true" class="collapse in">
-                        <li><a href="index.html">Minimal </a></li>
-                        <li class="active"><a href="index2.html" class="active">Analytical</a></li>
+                        <li><a href="#" >Minimal</a></li>
+                        <li><a href="#">Analytical</a></li>
                     </ul>
                 </li>
 

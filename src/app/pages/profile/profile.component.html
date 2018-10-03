@@ -1,17 +1,16 @@
 <div class="row animated fadeIn">
 
 
-  <div class="col-lg-7">
+  <div class="col-lg-6">
     <div class="card">
         <div class="card-body">
             <h4 class="card-title">Perfil del usuario</h4>
-            <h6 class="card-subtitle">{{ usuario.nombre }}</h6>
-            <form  class="form p-t-20">
+            <form ngNativeValidate #f="ngForm" (ngSubmit)="guardar( f.value )" class="form p-t-20">
                 <div class="form-group">
                     <label for="exampleInputuname">Nombre de usuario</label>
                     <div class="input-group">
                         <div class="input-group-addon"><i class="ti-user"></i></div>
-                        <input  name="nombre" type="text" class="form-control"  placeholder="Nombre de usuario" required>
+                        <input [(ngModel)] = "usuario.nombre" name="nombre" type="text" class="form-control"  placeholder="Nombre de usuario" required>
                     </div>
                 </div>
             
@@ -19,7 +18,6 @@
                 <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">
                   <i class="fa fa-save"></i>
                   Guardar
-                
                 </button>
              
             </form>
@@ -27,21 +25,21 @@
     </div>
 </div>
 
-<div class="col-lg-5">
+<div class="col-lg-6">
     <div class="card">
         <div class="card-body" align="center">
             <h4 class="card-title">Fotografia del usuario</h4>
             <h6 class="card-subtitle">{{ usuario.nombre }}</h6>
             
-            <img src="assets/images/users/user.png" class="w150">
+            <img *ngIf="!imagenTemp" [src]="usuario.img | imagen " class="w150">
+            <img *ngIf="imagenTemp" [src]="imagenTemp" class="w150">
             
-            <input  type="file">
+            <input (change)="selectImagen( $event.target.files[0] )" type="file">
             <br>
             <br>
-            <button type="button" class="btn btn-block btn-success waves-effect waves-light m-r-10">
+            <button (click)="cambiarImagen()" [disabled]="!imagenSubir" type="button" class="btn btn-block btn-success waves-effect waves-light m-r-10">
                 <i class="fa fa-save"></i>
-                Actualizar foto
-                
+                Actualizar foto 
             </button>
 
           </div>
